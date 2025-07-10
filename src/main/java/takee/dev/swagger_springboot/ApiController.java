@@ -2,7 +2,11 @@ package takee.dev.swagger_springboot;
 
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.tags.Tag;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.MediaType;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.multipart.MultipartFile;
 
 @RestController
 @RequestMapping(value = "/api")
@@ -39,6 +43,15 @@ public class ApiController {
             @RequestParam(name = "lastname", required = true) String lastname)
     {
         return new PostModel(1,firstname,lastname);
+    }
+
+    @PostMapping(value = "PostRequestMultipartFile", consumes = MediaType.MULTIPART_FORM_DATA_VALUE)
+    @Operation(summary = "ทดสอบ Api Multipart File", description = "Api Multipart File")
+    public ResponseEntity postRequestMultipartFile(
+            @RequestPart(name = "File") MultipartFile file,
+            @RequestPart(name = "Image") MultipartFile image
+            ) {
+        return new ResponseEntity<>(HttpStatus.OK);
     }
 
 }
