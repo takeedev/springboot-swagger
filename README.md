@@ -61,3 +61,9 @@ api-docs | กำหนดเส้นทาง (URL) ของ Swagger UI (ค�
     ```
     localhost:xxxx/swagger
     ```
+## 5 Swagger Annotation Overview
+| Annotation             | ใช้กับ            | คำอธิบาย |
+|------------------------|-------------------|-----------|
+| `@Tag`                | Controller        | จัดกลุ่ม API เป็นหมวด เช่น "User API" |
+| `@Operation`          | Method            | ระบุคำอธิบายของ API เช่น summary, description |
+| `@Schema`             | DTO / Field       | อธิบาย field เช่น description, example, required |
