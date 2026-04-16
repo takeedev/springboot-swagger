@@ -1,7 +1,7 @@
 # swagger กับ spring boot
 
 ## Swagger คืออะไร?
-Swagger เป็นเครื่องมือที่ช่วย **สร้าง เอกสาร API อัตโนมัติ** โดยสามารถ **ทดสอบ API ได้ทันที** ผ่านเว็บอินเทอร์เฟซ Spring Boot ใช้ **SpringDoc OpenAPI** เพื่อทำให้การสร้าง Swagger ง่ายขึ้น
+Swagger เป็นเครื่องมือที่ช่วย สร้าง เอกสาร API อัตโนมัติ โดยสามารถ ทดสอบ API ได้ทันที ผ่านเว็บอินเทอร์เฟซ Spring Boot ใช้ SpringDoc OpenAPI เพื่อทำให้การสร้าง Swagger ง่ายขึ้น
 
 ## 1. ติดตั้ง Swagger ใน Spring Boot  
 เพิ่ม dependencies ใน `pom.xml`  
@@ -57,9 +57,9 @@ Swagger เป็นเครื่องมือที่ช่วย **สร
     }
     ```
 ## 4 ทดสอบ api ผ่าน swagger
-* สามารถเข้าผ่าน URL ตามตัวอย่างด้วยล่างs
+* สามารถเข้าผ่าน URL ตามตัวอย่างด้วยล่าง
     ```
-    localhost:xxxx/swagger
+    localhost:{port}/swagger
     ```
 ## 5 Swagger Annotation Overview
 | Annotation             | ใช้กับ            | คำอธิบาย |
